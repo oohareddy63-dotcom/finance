@@ -6,6 +6,7 @@ const { asyncHandler } = require('../middleware/errorHandler');
 
 // ==========================
 // GET DASHBOARD SUMMARY
+
 // ==========================
 const getDashboardSummary = asyncHandler(async (req, res) => {
   let userId = req.user.role === 'admin' ? req.query.user_id : req.user.id;
