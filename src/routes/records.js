@@ -8,7 +8,6 @@ router.use(authenticate);
 
 // Create record (analyst or admin)
 router.post('/', authorize(['write:records']), financialRecordController.createRecord);
-
 // Get records (viewer, analyst, or admin)
 router.get('/', authorize(['read:records']), financialRecordController.getRecords);
 
