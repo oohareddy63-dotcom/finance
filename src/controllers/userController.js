@@ -10,7 +10,6 @@ const getUsers = asyncHandler(async (req, res) => {
     status: req.query.status,
     role: req.query.role
   };
-
   // Remove undefined filters
   Object.keys(filters).forEach(key => filters[key] === undefined && delete filters[key]);
 
