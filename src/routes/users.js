@@ -10,6 +10,7 @@ router.get('/', authorize(['manage:users']), userController.getUsers);
 
 // Get user statistics (admin only)
 router.get('/stats', authorize(['manage:users']), userController.getUserStats);
+
 // Toggle user status (admin only)
 router.patch('/:id/toggle-status', authorize(['manage:users']), userController.toggleUserStatus);
 
