@@ -4,6 +4,7 @@ const { validate, financialRecordSchemas, validateDateRange } = require('../util
 const { asyncHandler } = require('../middleware/errorHandler');
 
 // Create a new financial record
+
 const createRecord = asyncHandler(async (req, res) => {
   const recordData = {
     ...req.body,
