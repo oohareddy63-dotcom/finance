@@ -3,7 +3,6 @@ const User = require('../models/User');
 const FinancialRecord = require('../models/FinancialRecord');
 const { validate, userSchemas, querySchemas } = require('../utils/validation');
 const { asyncHandler } = require('../middleware/errorHandler');
-
 // Get all users (admin only)
 const getUsers = asyncHandler(async (req, res) => {
   const filters = {
