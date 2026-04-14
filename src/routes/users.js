@@ -4,7 +4,6 @@ const userController = require('../controllers/userController');
 const { authenticate, authorize, authorizeSelfOrAdmin } = require('../middleware/auth');
 // All user routes require authentication
 router.use(authenticate);
-
 // Get all users (admin only)
 router.get('/', authorize(['manage:users']), userController.getUsers);
 
