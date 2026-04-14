@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const User = require('../models/User');
 const FinancialRecord = require('../models/FinancialRecord');
 require('dotenv').config();
-
 const seedDatabase = async () => {
   try {
     // Connect to MongoDB
@@ -13,7 +12,6 @@ const seedDatabase = async () => {
     await User.deleteMany({});
     await FinancialRecord.deleteMany({});
     console.log('Cleared existing data');
-
     // Create sample users
     const users = [
       {
