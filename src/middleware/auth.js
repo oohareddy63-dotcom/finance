@@ -13,7 +13,6 @@ const generateToken = (user) => {
       ? user.getPermissions()
       : []
   };
-
   return jwt.sign(payload, process.env.JWT_SECRET, {
     expiresIn: '24h'
   });
